@@ -17,13 +17,12 @@ import stan_atilovich.harry_potter_and_retrofit.databinding.FragmentMainBinding
 import stan_atilovich.harry_potter_and_retrofit.domain.model.repository.CharacterRepository
 
 private val TAG = "MainFragment555"
-class MainFragment : Fragment() {
 
+class MainFragment : Fragment() {
     private val viewModel: MainViewModel by viewModels()
+
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,11 +36,11 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.character.collect{
-                Log.d(TAG,it.toString())
+            viewModel.character.collect {
+                binding.tvName.text = it.name
+                binding.tvHouse.text = it.hogwartsHouse
             }
         }
-
     }
 
     override fun onDestroyView() {

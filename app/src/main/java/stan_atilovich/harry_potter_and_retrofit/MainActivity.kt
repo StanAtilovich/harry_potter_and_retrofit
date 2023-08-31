@@ -1,4 +1,4 @@
-package stan_atilovich.harry_potter_and_retrofit.presentation
+package stan_atilovich.harry_potter_and_retrofit
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
