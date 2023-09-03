@@ -6,7 +6,7 @@ import stan_atilovich.harry_potter_and_retrofit.domain.model.repository.Characte
 class GetCharacterUseCase(
     private val repo: CharacterRepository
 ) {
-    suspend fun getCharacter(id: Int): CharacterModel {
+    suspend fun getCharacter(id: Int = 1): CharacterModel {
         return repo.getCharacterById(id)
-    }
+             }
 }

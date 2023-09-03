@@ -57,7 +57,7 @@ dependencies {
     //OkHttp
     implementation 'com.squareup.okhttp3:okhttp:4.11.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
-    //Coil
+    //Coil загрузка картинок типа glide
     implementation 'io.coil-kt:coil:0.13.0'
 
     testImplementation 'junit:junit:4.13.2'
